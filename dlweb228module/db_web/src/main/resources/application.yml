@@ -1,0 +1,20 @@
+server:
+  port: 19853
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbcoll?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: ltbo99Aa
+
+# MyBatis
+mybatis:
+  #  # 搜索指定包别名,找到对应的实体
+  typeAliasesPackage: com.iot228.entity
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/*Mapper.xml
+
+  configuration:
+    map-underscore-to-camel-case: true
+

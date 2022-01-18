@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<script th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/vue.js}"></script>
+<script th:src="@{/js/element-ui.js}"></script>
+<script th:src="@{/js/axios.js}"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>数据列表展示</title>
+    <style>
+        body {
+            color: blue;
+            background:url("img/back2.jpg")  no-repeat center center;
+            background-repeat: no-repeat;
+            background-size: 120%;
+            background-attachment:fixed;
+        }
+        .btn {
+            border-width: 0px; /* 边框宽度 */
+            border-radius: 3px; /* 边框半径 */
+            background: #1E90FF; /* 背景颜色 */
+            cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+            outline: none; /* 不显示轮廓线 */
+            font-family: Microsoft YaHei; /* 设置字体 */
+            color: white; /* 字体颜色 */
+            font-size: 17px; /* 字体大小 */
+        }
+        .btn:hover {
+            background: #5599FF;
+        }
+    </style>
+    <link rel="stylesheet" th:href="@{/css/element-ui.css}">
+
+</head>
+<body>
+<h2 style="text-align: center;margin-top: 15px;color: orangered">彭俊龙228采集数据列表展示</h2>
+<div id="table">
+    <h2 style="text-align: center;margin-top: 20px;color: blue">
+        实时刷新数据，显示最新的数据，可自动分页
+    </h2>
+    <h3 style="text-align: center">
+        <a href="/chart" type="info">
+            点击查看动态柱状图
+        </a>
+    </h3>
+    <div style="text-align: center">
+        <el-switch
+                v-model="LED"
+                active-text="LED开"
+                inactive-text="LED关"
+                @change="changeLED()">
+        </el-switch>
+        <br>
+        <el-switch
+                v-model="BEEP"
+                active-text="蜂鸣器开"
+                inactive-text="蜂鸣器关"
+                @change="changeBeep()">
+        </el-switch>
+    </div>
+
+    <div class="filter-container">
+        <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit"
+                   @click="handleCreate">
+            添加
+        </el-button>
+    </div>
+    <el-table :data="data.slice((page - 1) * limit, page * limit)"
+              element-loading-text="加载中..."
+              stripe
+              fit
+              highlight-current-row style="width: 100%">
+
+        <el-table-column label="编&emsp;号" width="180" align="center">
+            <template slot-scope="scope">
+                {{ scope.row.id }}
+            </template>
+        </el-table-column>
+
+
+        <el-table-column label="温&emsp;度" align="center">
+            <template slot-scope="scope">
+                {{ scope.row.temp }} ℃
+            </template>
+        </el-table-column>
+
+        <el-table-column label="湿&emsp;度" width="180" align="center">
+            <template slot-scope="scope">
+                {{ scope.row.hum }} %
+            </template>
+        </el-table-column>
+
+        <el-table-column label="超声波" align="center">
+            <template slot-scope="scope">
+                {{ scope.row.supersonic }} cm
+            </template>
+        </el-table-column>
+
+        <el-table-column label="光&emsp;强" width="180" align="center">
+            <template slot-scope="scope">
+                {{ scope.row.light }}lx
+            </template>
+        </el-table-column>
+
+        <el-table-column prop="colltime" label="采集时间" align="center">
+            <template slot-scope="scope">
+                {{ scope.row.colltime }}
+            </template>
+        </el-table-column>
+        <el-table-column label="操&emsp;作" align="center" class-name="small-padding fixed-width" min-width="140">
+            <template slot-scope="{row,$index}">
+                <el-button type="primary" size="mini" @click="handleUpdate(row)">
+                    编辑
+                </el-button>
+
+                <el-button v-if="row.status!=='deleted'" size="mini" type="danger" @click="handleDelete(row,$index)">
+                    删除
+                </el-button>
+            </template>
+        </el-table-column>
+    </el-table>
+    <div class="pagination">
+        <el-pagination
+                v-show="data.length > 0"
+                @size-change="handleSizeChange"
+                @current-change="handleCurrentChange"
+                :current-page="page"
+                :page-sizes="[10, 15, 20]"
+                :page-size="limit"
+                layout="total, sizes, prev, pager, next"
+                :total="data.length"
+                :background=true>
+        </el-pagination>
+    </div>
+
+    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" width="25%">
+        <el-form ref="collData" :model="collData" label-position="left" label-width="70px"
+                 style="width: 400px; margin-left:50px;">
+            <el-form-item label="数据编号" v-if="this.dialogStatus=='update'">
+                <el-input v-model="collData.id" autocomplete="off" :disabled="true"></el-input>
+            </el-form-item>
+            <el-form-item label="温&emsp;度">
+                <el-input v-model="collData.temp" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="湿&emsp;度">
+                <el-input v-model="collData.hum" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="超声波">
+                <el-input v-model="collData.supersonic" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="光&emsp;强">
+                <el-input v-model="collData.light" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="采集时间" v-if="this.dialogStatus=='update'">
+                <el-input v-model="collData.colltime" autocomplete="off" :disabled="true"></el-input>
+            </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+            <el-button @click="dialogFormVisible = false">取 消</el-button>
+            <el-button type="primary" @click="dialogStatus==='add'?createData():updateData()">确 定</el-button>
+        </div>
+    </el-dialog>
+
+</div>
+
+
+
+<script>
+    new Vue({
+        el: "#table",
+        data: {
+            page: 1,
+            limit: 15,
+            data: [],
+            collData: {
+                id: '',
+                temp: '',
+                hum: '',
+                supersonic: '',
+                light: '',
+                ispermit: '',
+                colltime: '',
+            },
+            dialogFormVisible: false,
+            dialogStatus: '',
+            textMap: {
+                update: '修改数据',
+                add: '添加数据'
+            },
+            LED: false,
+            BEEP: false
+        },
+        created() {
+            this.getData();
+        },
+        mounted() {
+            setInterval(this.getData, 2000)
+        },
+        methods: {
+            getData() {
+                axios.get('/selectAllCollData').then(response => {
+                    // console.log(response.data);
+                    this.data = response.data;
+                }, response => {
+                    console.log("error");
+                });
+            },
+            //每页下拉显示数据
+            handleSizeChange: function (size) {
+                this.limit = size;
+            },
+            //点击第几页
+            handleCurrentChange: function (page) {
+                this.page = page;
+            },
+            handleUpdate(row) {
+                this.collData = Object.assign({}, row) // copy obj
+                this.dialogStatus = 'update'
+                this.dialogFormVisible = true
+                this.$nextTick(() => {
+                    this.$refs['collData'].clearValidate()
+                })
+            },
+            updateData() {
+                this.$refs['collData'].validate((valid) => {
+                    if (valid) {
+                        axios.post('/updateCollDataById', this.collData).then(response => {
+                            if (response.data === 1) {
+                                const index = this.data.findIndex(v => v.id === this.collData.id)
+                                this.data.splice(index, 1, this.collData)
+                                this.dialogFormVisible = false
+                                this.$notify({
+                                    title: '修改成功',
+                                    message: '数据修改成功',
+                                    type: 'success',
+                                    duration: 2000
+                                })
+                            } else {
+                                this.$notify.error({
+                                    title: '添加失败',
+                                    message: '数据修改失败，请联系管理员',
+                                    duration: 2000
+                                })
+                            }
+                        })
+                    }
+                })
+            },
+            handleCreate() {
+                this.dialogStatus = 'add'
+                this.dialogFormVisible = true
+                this.$nextTick(() => {
+                    this.$refs['collData'].clearValidate()
+                })
+            },
+            createData() {
+                this.$refs['collData'].validate((valid) => {
+                    if (valid) {
+                        axios.post('/insertCollData', this.collData).then(response => {
+                            console.log(this.collData)
+                            if (response.data === 1) {
+                                this.data.unshift(this.collData)
+                                this.dialogFormVisible = false
+                                this.$message({
+                                    message: '数据添加成功',
+                                    type: 'success',
+                                })
+                            } else {
+                                this.$message.error('数据添加失败，请联系管理员!')
+                            }
+                        })
+                    }
+                })
+            },
+            handleDelete(row, index) {
+                axios.get('/deleteCollDataById?id=' + row.id).then(response => {
+                    if (response.data === 1) {
+                        this.data.splice(index, 1);
+                        this.$message({
+                            message: 'id为' + row.id + '的数据删除成功!',
+                            type: 'success',
+                        });
+                    } else {
+                        this.$message.error('id为' + row.id + '的数据删除失败!');
+                    }
+                })
+            },
+            changeLED() {
+                axios.get('/changeLED?status=' + this.LED).then(response => {
+                    let msg;
+                    if (this.LED)
+                        msg = "LED灯开启"
+                    else
+                        msg = "LED灯关闭"
+                    if (response.data === 1) {
+                        this.$message({
+                            message: msg + '成功！',
+                            type: 'success',
+                        });
+                    } else {
+                        this.$message.error(msg + "失败！");
+                        this.LED = !this.LED;
+                    }
+                }, reason => {
+                    this.$message.error("操作失败！");
+                    this.LED = !this.LED;
+                });
+            },
+            changeBeep() {
+                axios.get('/changeBeep?status=' + this.BEEP).then(response => {
+                    let msg;
+                    if (this.LED)
+                        msg = "蜂鸣器灯开启"
+                    else
+                        msg = "蜂鸣器灯关闭"
+                    if (response.data === 1) {
+                        this.$message({
+                            message: msg + '成功！',
+                            type: 'success',
+                        });
+                    } else {
+                        this.$message.error(msg + "失败！");
+                        this.LED = !this.LED;
+                    }
+                }, reason => {
+                    this.$message.error("操作失败！");
+                    this.LED = !this.LED;
+                });
+            },
+        }
+    })
+
+</script>
+</body>
+</html>
+

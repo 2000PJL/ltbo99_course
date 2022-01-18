@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/css/style.css" rel='stylesheet' type='text/css' />
+		<link href="/layui/src/css/layui.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="/layui/src/layui.js"></script>
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+	 <!-----start-main---->
+	 <div class="main">
+		<div class="login-form">
+
+			<h1>物联网数据采集系统</h1>
+					<div class="head">
+						<img src="user.png" alt=""/>
+					</div>
+			<form class="layui-form log-con">
+						<input id="user_name" name="user_name" lay-verify="user_name" type="text" class="text" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
+						<input id="user_pwd" name="user_pwd" lay-verify="user_pwd" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+						<div class="submit">
+							<input type="submit" lay-submit lay-filter="login"   value="LOGIN" >
+					</div>	
+					<p><a href="wlmm">Forgot Password ?</a></p>
+				</form>
+			</div>
+			<!--//End-login-form-->
+			 <!-----start-copyright---->
+   					<div class="copy-right">
+						<p>Copyright &copy; 2021.PJL All rights reserved.<a target="_blank" ></a></p>
+					</div>
+				<!-----//end-copyright---->
+		</div>
+			 <!-----//end-main---->
+
+<script  type="text/javascript">
+	layui.use(['form','jquery'],
+			function() {
+				$ = layui.jquery;
+				var form = layui.form;
+				//监听提交
+				form.on('submit(login)',
+						function (data) {
+							var user_name = document.getElementById("user_name").value;
+							var user_pwd = document.getElementById("user_pwd").value;
+							//发异步，把数据提交给后端
+							$.ajax({
+								url: "/login",
+								data: {
+									user_name: user_name,
+									user_pwd: user_pwd,
+								},
+								type: "Post",
+								dataType: "json",
+								success: function (data) {
+									if (data.result === "success") {
+										location.href = "/index1";
+									}else if (data.result === "yhbcz")
+									{
+										window.alert("用户不存在");
+									} else if (data.result === "errpwd")
+									{
+										window.alert("密码错误");
+									} else {
+										document.getElementById("user_name").value = "USERNAME";
+										document.getElementById("user_pwd").value = "USERPWD";
+										window.alert("空指针异常");
+									}
+								}
+							});
+							return false;
+						});
+
+			})
+
+</script>
+
+</body>
+</html>

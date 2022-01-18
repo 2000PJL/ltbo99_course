@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.xuexiangjys:XUI:1.1.6@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/annotations.zip!/" />
+      <root url="jar://E:/Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/res" />
+      <root url="file://$PROJECT_DIR$/../../../Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/res" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/AndroidManifest.xml" />
+      <root url="file://E:/Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/res" />
+      <root url="jar://E:/Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/jars/classes.jar!/" />
+      <root url="file://E:/Gradle/caches/transforms-2/files-2.1/466c7bac97d400ae8f50b14efff2f74b/jetified-XUI-1.1.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.1.6/8a3209736b9a4f359e8c87f2a35f01554f1c1c46/XUI-1.1.6-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.1.6/f4346507f9e00f8ea793fa78bd860f556f48b801/XUI-1.1.6-javadoc.jar!/" />
+      <root url="jar://E:/Gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.1.6/f4346507f9e00f8ea793fa78bd860f556f48b801/XUI-1.1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.1.6/5745a3db196301ef4da4594f217fa9f233e1024b/XUI-1.1.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../Gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.1.6/d735bb1337283c09cd9ec666f8a6166647008c34/XUI-1.1.6-sources.jar!/" />
+      <root url="jar://E:/Gradle/caches/modules-2/files-2.1/com.github.xuexiangjys/XUI/1.1.6/d735bb1337283c09cd9ec666f8a6166647008c34/XUI-1.1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

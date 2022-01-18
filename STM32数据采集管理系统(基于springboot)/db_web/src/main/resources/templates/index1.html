@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>我的主页</title>
+    <meta charset="UTF-8">
+    <!-- layui的css和js -->
+    <link rel="stylesheet" href="layui/dist/css/layui.css">
+    <script type="text/javascript" src="layui/dist/layui.js"></script>
+    <script type="text/javascript" src="layui/src/layui.js"></script>
+    <script type="text/javascript" src="layui/src/modules/layer.js" ></script>
+
+</head>
+<body>
+
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header custom-header ">
+        <div class="layui-logo">数据采集检测系统</div>
+        <ul class="layui-nav layui-layout-right" style="margin-right: 10px">
+            <li class="layui-nav-item">
+                <a href="javascript:">
+                    <img src="//wimg.bigbigwork.com/words-topic-img/d97f5196-2538-4bdb-aaca-3d0a0767ad99.jpg" class="layui-nav-img">
+                    <span th:text="1985343015"></span>
+                </a>
+                <dl class="layui-nav-child">
+                    <!--                    <dd><a href="">修改个人资料</a></dd>-->
+                    <dd><a href="javascript:void(0)" onclick="Logout()">退出当前账户</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll" >
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:"><i class="layui-icon" ></i>主页</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/index">非layui架构数据展示页面</a></dd>
+                        <dd><a href="/chart1">数据可视化</a></dd>
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a href="javascript:">扩展功能</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="/wlmm1">忘记密码</a></dd>
+                        <dd><a href="javascript:">暂未开发</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;">
+            <div class="layui-row">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">关键字查询:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" style="width: 115%" placeholder="请输入采集方式或数据类型查询">
+                        </div>
+                        <label class="layui-form-label">采集时间:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" class="layui-input" id="test1" placeholder="采集时间">
+                        </div>
+                        <input type="button" class="layui-btn layui-btn-warm" value="搜索" onclick="">
+                    </div>
+                </div>
+                <div class="layui-row">
+                    <table class="layui-hide" id="demo"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+    </div>
+</div>
+
+<!-- layui的日期选择器 -->
+<script type="text/javascript" src="layui/src/modules/laydate.js"></script>
+<script>
+    layui.use('laydate', function(){
+        var laydate1 = layui.laydate;
+        var laydate2 = layui.laydate;
+
+        //执行一个laydate实例
+        laydate1.render({
+            elem: '#test1' //指定元素
+        });
+        laydate2.render({
+            elem: '#test2' //指定元素
+        });
+
+    });
+</script>
+
+<script>
+    layui.use('table', function(data){
+        var table = layui.table;
+
+        //展示所有数据
+        table.render({
+                elem: '#demo'
+                ,url:'/allSensor'
+                ,cols: [
+                    [   //标题栏
+                        {field: 'id', title: '序号', width: 130, sort: true}
+                        ,{field: 'temp', title: '温度', width: 130,sort: true}
+                        ,{field: 'hum', title: '湿度', Width: 130,sort: true}
+                        ,{field: 'redlight', title: '是否有人', Width: 130,sort: true}
+                        ,{field: 'ip', title: 'IP地址', minWidth: 130, sort:true}
+                        ,{field: 'collTime', title: '采集时间', minWidth: 140}
+                    ]
+                ]
+                ,parseData: function(res){ //将原始数据解析成 table 组件所规定的数据，res为从url中get到的数据
+                    var result;
+                    console.log(this);
+                    console.log(JSON.stringify(res));
+                    if(this.page.curr){
+                        result = res.data.slice(this.limit*(this.page.curr-1),this.limit*this.page.curr);
+                    }
+                    else{
+                        result=res.data.slice(0,this.limit);
+                    }
+                    return {
+                        "code": res.code, //解析接口状态
+                        "msg": res.msg, //解析提示文本
+                        "count": res.count, //解析数据长度
+                        "data": result //解析数据列表
+                    };
+                }
+                ,page: true //是否显示分页
+                ,limit: 10 //每页默认显示的数量
+                ,limits: [5, 10, 20, 40]
+            }
+        );
+    });
+</script>
+
+<script type="text/javascript">
+    function Logout(){
+        layer.open({
+            type:1,
+            title:"提示",
+            area:'300px;',
+            id:'logout',
+            btn:['确认','取消'],
+            <!--确定要退出当前账号吗？-->
+            content:'<div style = "color:rgba(0,0,0,0.98);margin-top: 13px;font-size: 20px" align="center">确定要退出当前账号吗？</div>'
+            ,yes:function f() {
+                location.href="/";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

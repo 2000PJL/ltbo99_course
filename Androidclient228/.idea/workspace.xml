@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1270d9cd-c8c2-4f66-8988-ac353360db88" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="HONOR_9X" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Program Files/maven" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1snG0lTlIfmsdFsrC7R4U5hLP82" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="MGF6R19712023011" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-06-09T09:50:38.272708500Z" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="D:/AndroidSDK" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.hunau.androidclient228.fragment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\code\examtest228\Androidclient228\app\src\main\res\drawable" />
+      <recent name="G:\code\examtest228\Androidclient228\app\src\main\res\mipmap-xxxhdpi" />
+      <recent name="G:\code\examtest228\Androidclient228\app\src\main\res\mipmap-xxhdpi" />
+      <recent name="G:\code\examtest228\Androidclient228\app\src\main\res\mipmap-xhdpi" />
+      <recent name="G:\code\examtest228\Androidclient228\app\src\main\res\mipmap-mdpi" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Java />
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1270d9cd-c8c2-4f66-8988-ac353360db88" name="Default Changelist" comment="" />
+      <created>1621500718155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621500718155</updated>
+      <workItem from="1621500721067" duration="3606000" />
+      <workItem from="1621666694156" duration="3007000" />
+      <workItem from="1621669735465" duration="1336000" />
+      <workItem from="1621746889237" duration="532000" />
+      <workItem from="1621757585255" duration="1145000" />
+      <workItem from="1621759027937" duration="4283000" />
+      <workItem from="1621765419105" duration="1492000" />
+      <workItem from="1622030924972" duration="3278000" />
+      <workItem from="1622035573266" duration="272000" />
+      <workItem from="1622036046026" duration="848000" />
+      <workItem from="1622081100407" duration="2817000" />
+      <workItem from="1622084889603" duration="442000" />
+      <workItem from="1622086927576" duration="594000" />
+      <workItem from="1622088721207" duration="2910000" />
+      <workItem from="1622113239698" duration="159000" />
+      <workItem from="1622113745622" duration="2978000" />
+      <workItem from="1622119696897" duration="8564000" />
+      <workItem from="1622276273814" duration="1166000" />
+      <workItem from="1622278920839" duration="234000" />
+      <workItem from="1622286668452" duration="630000" />
+      <workItem from="1622349087895" duration="50000" />
+      <workItem from="1622362955874" duration="139000" />
+      <workItem from="1622366985755" duration="4019000" />
+      <workItem from="1622374117303" duration="819000" />
+      <workItem from="1622375432737" duration="1924000" />
+      <workItem from="1622465865691" duration="2317000" />
+      <workItem from="1622535213356" duration="1742000" />
+      <workItem from="1622726939361" duration="712000" />
+      <workItem from="1622766019914" duration="1339000" />
+      <workItem from="1622769719838" duration="1385000" />
+      <workItem from="1623116418685" duration="2082000" />
+      <workItem from="1623140737421" duration="7365000" />
+      <workItem from="1623157867313" duration="8947000" />
+      <workItem from="1623228753574" duration="189000" />
+      <workItem from="1623229846558" duration="834000" />
+      <workItem from="1623232012549" duration="5148000" />
+      <workItem from="1623243092880" duration="1982000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621504313314">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1621504313314" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623145372558">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1623145372558" />
+    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1623144936350">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1623144936350" />
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom" timestamp="1623241268773">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623241268773" />
+    <state width="1493" height="196" key="GridCell.Tab.0.center" timestamp="1623241268772">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623241268772" />
+    <state width="1493" height="196" key="GridCell.Tab.0.left" timestamp="1623241268772">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623241268772" />
+    <state width="1493" height="196" key="GridCell.Tab.0.right" timestamp="1623241268772">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623241268772" />
+    <state x="349" y="159" key="IDE.errors.dialog" timestamp="1622175757835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="159" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1622175757835" />
+    <state x="249" y="0" width="1230" height="824" key="SettingsEditor" timestamp="1622727054178">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" width="1230" height="824" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1622727054178" />
+    <state x="565" y="193" key="chooseDestDirectoryDialog" timestamp="1621501048630">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="565" y="193" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1621501048630" />
+    <state x="93" y="93" width="1350" height="638" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1621763892413">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1536.824@0.0.1536.824" timestamp="1621763892413" />
+    <state x="435" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1623243094339">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="435" y="187" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1623243094339" />
+    <state x="673" y="145" width="755" height="548" key="find.popup" timestamp="1623205351521">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="673" y="145" width="755" height="548" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1623205351521" />
+    <state x="269" y="53" width="1082" height="630" key="new project wizard" timestamp="1623117551279">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="269" y="53" width="1082" height="630" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1623117551279" />
+  </component>
+  <component name="ideajad">
+    <property name="annotate" value="false" />
+    <property name="annotateFully" value="false" />
+    <property name="braces" value="false" />
+    <property name="clear" value="false" />
+    <property name="confirmNavigationTriggeredDecompile" value="true" />
+    <property name="dead" value="true" />
+    <property name="defaultInitializers" value="false" />
+    <property name="dissassemblerOnly" value="false" />
+    <property name="fieldsFirst" value="true" />
+    <property name="fileExtension" value="java" />
+    <property name="fullyQualifiedNames" value="false" />
+    <property name="indentation" value="4" />
+    <property name="intRadix" value="10" />
+    <property name="lineNumbersAsComments" value="true" />
+    <property name="longRadix" value="10" />
+    <property name="maxStringLength" value="64" />
+    <property name="nocast" value="false" />
+    <property name="noclass" value="false" />
+    <property name="nocode" value="false" />
+    <property name="noconv" value="false" />
+    <property name="noctor" value="false" />
+    <property name="nodos" value="false" />
+    <property name="nofd" value="false" />
+    <property name="noinner" value="false" />
+    <property name="nolvt" value="false" />
+    <property name="nonlb" value="false" />
+    <property name="outputDirectory" value="" />
+    <property name="packFields" value="3" />
+    <property name="packImports" value="7" />
+    <property name="prefixNumericalClasses" value="_cls" />
+    <property name="prefixNumericalFields" value="_fld" />
+    <property name="prefixNumericalLocals" value="_lcl" />
+    <property name="prefixNumericalMethods" value="_mth" />
+    <property name="prefixNumericalParameters" value="_prm" />
+    <property name="prefixUnusedExceptions" value="_ex" />
+    <property name="readonly" value="false" />
+    <property name="safe" value="false" />
+    <property name="sort" value="false" />
+    <property name="spaceAfterKeyword" value="false" />
+    <property name="splitStringsAtNewline" value="false" />
+    <property name="useTabs" value="false" />
+  </component>
+</project>

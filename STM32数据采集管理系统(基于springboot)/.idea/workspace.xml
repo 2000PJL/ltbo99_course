@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="76771ae6-2790-40fe-919f-9373c189ec63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_mapper/src/main/resources/mapper/TbDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db_mapper/src/main/resources/mapper/TbDataMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_mapper/target/classes/mapper/TbDataMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/db_mapper/target/classes/mapper/TbDataMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_service/target/classes/META-INF/db_service.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dlweb228module/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dlweb228module/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dlweb228module/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dlweb228module/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dlweb228module/db_mapper/src/main/java/net/iot228/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dlweb228module/db_mapper/src/main/java/net/iot228/mapper/LoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dlweb228module/db_web/src/main/java/net/iot228/controller/TbDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dlweb228module/db_web/src/main/java/net/iot228/controller/TbDataController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Program Files/maven" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1tgfPKaZYFFSHwALATGhyB34a9X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="D:/AndroidSDK" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThreeNodeDataColl310（web）" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.56911343" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\code\examtest228\lasttest\dlweb228module\db_web\src\main\resources\static" />
+      <recent name="G:\code\examtest228\lasttest\dlweb228module\db_web\src\main\resources\templates" />
+      <recent name="G:\code\examtest228\lasttest\dlweb228module\db_web\src\main\java\net\iot228" />
+      <recent name="G:\code\examtest228\lasttest\dlweb228module\db_service\src\main\java\net\iot228\service" />
+      <recent name="G:\code\examtest228\lasttest\dlweb228module\db_netty\src\main\java\net\iot228\netty" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DbWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="db_web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.iot228.DbWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76771ae6-2790-40fe-919f-9373c189ec63" name="Default Changelist" comment="" />
+      <created>1623195627698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623195627698</updated>
+      <workItem from="1623195632603" duration="8704000" />
+      <workItem from="1623228720713" duration="308000" />
+      <workItem from="1623234599844" duration="406000" />
+      <workItem from="1623237108345" duration="651000" />
+      <workItem from="1623244641501" duration="1805000" />
+      <workItem from="1623296470232" duration="3765000" />
+      <workItem from="1623322452304" duration="10304000" />
+      <workItem from="1623376356063" duration="4565000" />
+      <workItem from="1623404313981" duration="2916000" />
+      <workItem from="1623408498277" duration="1529000" />
+      <workItem from="1623851963371" duration="573000" />
+      <workItem from="1637496112414" duration="401000" />
+      <workItem from="1637545692131" duration="1558000" />
+      <workItem from="1639398090871" duration="322000" />
+      <workItem from="1641183980042" duration="35000" />
+      <workItem from="1641260444734" duration="1464000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="ideajad">
+    <property name="annotate" value="false" />
+    <property name="annotateFully" value="false" />
+    <property name="braces" value="false" />
+    <property name="clear" value="false" />
+    <property name="confirmNavigationTriggeredDecompile" value="true" />
+    <property name="dead" value="true" />
+    <property name="defaultInitializers" value="false" />
+    <property name="dissassemblerOnly" value="false" />
+    <property name="fieldsFirst" value="true" />
+    <property name="fileExtension" value="java" />
+    <property name="fullyQualifiedNames" value="false" />
+    <property name="indentation" value="4" />
+    <property name="intRadix" value="10" />
+    <property name="lineNumbersAsComments" value="true" />
+    <property name="longRadix" value="10" />
+    <property name="maxStringLength" value="64" />
+    <property name="nocast" value="false" />
+    <property name="noclass" value="false" />
+    <property name="nocode" value="false" />
+    <property name="noconv" value="false" />
+    <property name="noctor" value="false" />
+    <property name="nodos" value="false" />
+    <property name="nofd" value="false" />
+    <property name="noinner" value="false" />
+    <property name="nolvt" value="false" />
+    <property name="nonlb" value="false" />
+    <property name="outputDirectory" value="" />
+    <property name="packFields" value="3" />
+    <property name="packImports" value="7" />
+    <property name="prefixNumericalClasses" value="_cls" />
+    <property name="prefixNumericalFields" value="_fld" />
+    <property name="prefixNumericalLocals" value="_lcl" />
+    <property name="prefixNumericalMethods" value="_mth" />
+    <property name="prefixNumericalParameters" value="_prm" />
+    <property name="prefixUnusedExceptions" value="_ex" />
+    <property name="readonly" value="false" />
+    <property name="safe" value="false" />
+    <property name="sort" value="false" />
+    <property name="spaceAfterKeyword" value="false" />
+    <property name="splitStringsAtNewline" value="false" />
+    <property name="useTabs" value="false" />
+  </component>
+</project>

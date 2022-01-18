@@ -1,0 +1,161 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.iot310.androiddemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml
+10    <!-- 网络权限 -->
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:5:5-67
+11-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:5:22-64
+12    <!-- 访问WIFI -->
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:7:5-76
+13-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:7:22-73
+14
+15    <!-- 进程杀死 -->
+16    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" /> <!-- 文件读写权限 -->
+16-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:10:5-84
+16-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:10:22-81
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:12:5-80
+17-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:12:22-77
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:13:5-81
+18-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:13:22-78
+19    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+19-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:17:5-76
+19-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:17:22-73
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:18:5-79
+20-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:18:22-76
+21
+22    <application
+22-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:8:5-25:19
+23        android:name="com.iot310.APP"
+23-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:9:9-38
+24        android:allowBackup="true"
+24-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:10:9-35
+25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+25-->[androidx.core:core:1.3.1] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\c560b8721f05ca12656603dd382025ab\core-1.3.1\AndroidManifest.xml:24:18-86
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:icon="@mipmap/ic_launcher"
+28-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:11:9-43
+29        android:label="@string/app_name"
+29-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:12:9-41
+30        android:networkSecurityConfig="@xml/network_security_config"
+30-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:13:9-69
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:14:9-54
+32        android:supportsRtl="true"
+32-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:15:9-35
+33        android:theme="@style/XUITheme.Phone" >
+33-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:16:9-46
+34        <activity android:name="com.iot310.androiddemo.MainActivity" >
+34-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:18:9-24:20
+34-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:18:19-47
+35            <intent-filter>
+35-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:19:13-23:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:20:17-68
+36-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:20:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:22:17-76
+38-->G:\code\github repo\ltbo99\DataCollAndroidClient310\app\src\main\AndroidManifest.xml:22:27-74
+39            </intent-filter>
+40        </activity>
+41
+42        <provider
+42-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:10:9-14:43
+43            android:name="com.xuexiang.xui.XUIInitProvider"
+43-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:11:13-60
+44            android:authorities="com.iot310.androiddemo.xui-init-provider"
+44-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:12:13-69
+45            android:exported="false"
+45-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:13:13-37
+46            android:multiprocess="true" />
+46-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:14:13-40
+47
+48        <activity
+48-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:16:9-18:59
+49            android:name="com.xuexiang.xui.widget.imageview.preview.ui.PreviewActivity"
+49-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:17:13-88
+50            android:theme="@style/XUITheme.Translucent" />
+50-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:18:13-56
+51        <activity
+51-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:19:9-21:59
+52            android:name="com.xuexiang.xui.widget.imageview.preview.ui.VideoPlayerActivity"
+52-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:20:13-92
+53            android:theme="@style/XUITheme.Translucent" />
+53-->[com.github.xuexiangjys:XUI:1.1.6] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\466c7bac97d400ae8f50b14efff2f74b\jetified-XUI-1.1.6\AndroidManifest.xml:21:13-56
+54        <activity
+54-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:21:9-25:75
+55            android:name="com.xuexiang.xutil.system.PermissionUtils$PermissionActivity"
+55-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:22:13-88
+56            android:configChanges="orientation|keyboardHidden|screenSize"
+56-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:23:13-74
+57            android:theme="@style/XUtil_Activity_Translucent"
+57-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:24:13-62
+58            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+58-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:25:13-72
+59
+60        <provider
+60-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:27:9-35:20
+61            android:name="androidx.core.content.FileProvider4Utils"
+61-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:28:13-68
+62            android:authorities="com.iot310.androiddemo.xutil.provider"
+62-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:29:13-66
+63            android:exported="false"
+63-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:30:13-37
+64            android:grantUriPermissions="true" >
+64-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:31:13-47
+65            <meta-data
+65-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:32:13-34:64
+66                android:name="android.support.FILE_PROVIDER_PATHS"
+66-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:33:17-67
+67                android:resource="@xml/xutil_provider_paths" />
+67-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:34:17-61
+68        </provider>
+69        <provider
+69-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:12:9-20:20
+70            android:name="com.just.agentweb.AgentWebFileProvider"
+70-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:13:13-66
+71            android:authorities="com.iot310.androiddemo.AgentWebFileProvider"
+71-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:14:13-72
+72            android:exported="false"
+72-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:15:13-37
+73            android:grantUriPermissions="true" >
+73-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:16:13-47
+74            <meta-data
+74-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:32:13-34:64
+75                android:name="android.support.FILE_PROVIDER_PATHS"
+75-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:33:17-67
+76                android:resource="@xml/web_files_public" />
+76-->[com.github.xuexiangjys.XUtil:xutil-core:2.0.0] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\b2c7f6a4d6783f98890fd183686e39f0\jetified-xutil-core-2.0.0\AndroidManifest.xml:34:17-61
+77        </provider>
+78
+79        <activity
+79-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:22:9-29:20
+80            android:name="com.just.agentweb.ActionActivity"
+80-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:23:13-60
+81            android:configChanges="keyboardHidden|orientation|screenSize"
+81-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:24:13-74
+82            android:exported="false"
+82-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:25:13-37
+83            android:launchMode="standard"
+83-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:26:13-42
+84            android:theme="@style/actionActivity"
+84-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:27:13-50
+85            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+85-->[com.just.agentweb:agentweb:4.1.3] D:\Program Files\maven\repo\caches\transforms-2\files-2.1\85705989f3fd0a83e2214d8285a3da97\jetified-agentweb-4.1.3\AndroidManifest.xml:28:13-72
+86        </activity>
+87    </application>
+88
+89</manifest>

@@ -1,0 +1,18 @@
+server:
+  port: 1095
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: true
+  datasource:
+    username: root
+    password: ltbo99Aa
+    url: jdbc:mysql://localhost:3306/bookdata?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  typeAliasesPackage: com.iot45.entity
+  mapperLocations: classpath:mybatis/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true

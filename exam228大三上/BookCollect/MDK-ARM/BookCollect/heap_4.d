@@ -1,0 +1,13 @@
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+bookcollect\heap_4.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+bookcollect\heap_4.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+bookcollect\heap_4.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+bookcollect\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+bookcollect\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

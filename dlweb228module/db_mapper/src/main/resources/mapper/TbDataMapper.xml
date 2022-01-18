@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.iot228.mapper.TbDataMapper">
+    
+    <select id="selectTbDataList" resultType="net.iot228.entity.TbData">
+        select id, temp, hum, light, ip, colltime
+        from tb_data
+        order by id desc
+        limit #{offset}, #{size}
+    </select>
+
+    <select id="countCollData" resultType="int">
+        select count(id)
+        from tb_data
+    </select>
+
+
+
+    <insert id="tbData" parameterType="net.iot228.entity.TbData">
+        insert into tb_data(id, temp, hum, light, ip, colltime)
+        values (#{id}, #{temp}, #{hum}, #{light}, #{ip}, sysdate())
+    </insert>
+</mapper>

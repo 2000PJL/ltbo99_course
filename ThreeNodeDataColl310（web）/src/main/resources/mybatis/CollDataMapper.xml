@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iot310.datacoll.mapper.CollDataMapper">
+    <resultMap id="CollDataMapper" type="CollData">
+        <id property="" column=""/>
+        <result property="" column=""/>
+    </resultMap>
+
+    <insert id="insertData" parameterType="CollData">
+        insert into data
+        values (#{id}, #{areaId}, #{temp}, #{hum}, #{light}, #{soil}, #{sound}, #{ip}, sysdate())
+    </insert>
+
+    <select id="selectCollDataList" resultType="CollData">
+        select d.id, area_id, temp, hum, light, soil, sound, ip, coll_time, name area
+        from data d
+                 left join area a on a.id = d.area_id
+        order by id desc
+        limit #{page}, #{size}
+    </select>
+
+    <select id="countCollData" resultType="int">
+        select count(id) from data
+    </select>
+
+</mapper>

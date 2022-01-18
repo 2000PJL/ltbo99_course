@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>谭旭洋图表展示</title>
+    <script type="text/javascript" th:src="@{/js/echarts.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+</head>
+<body>
+<h2 style="text-align: center;">采集数据可视化</h2>
+<div style="text-align: center; margin:10px auto;">
+    <a th:href="@{/index}" rel="external nofollow">
+        <h2>点我返回动态列表展示</h2>
+    </a>
+</div>
+
+<div id="lightChart" style="display:inline-block;width: 45%;height:400px;"></div>
+<div id="tempChart" style="display:inline-block;width: 45%;height:400px;"></div>
+<div id="humChart" style="display:inline-block;width: 45%;height:400px;"></div>
+<div id="soilChart" style="display:inline-block;width: 45%;height:400px;"></div>
+<div id="soundChart" style="display:inline-block;width: 45%;height:400px;"></div>
+<div id="pieChart" style="display:inline-block;width: 45%;height:400px;"></div>
+<script>
+    let lightChart = echarts.init(document.getElementById('lightChart'));
+    let tempChart = echarts.init(document.getElementById('tempChart'));
+    let humChart = echarts.init(document.getElementById('humChart'));
+    let soilChart = echarts.init(document.getElementById('soilChart'));
+    let soundChart = echarts.init(document.getElementById('soundChart'));
+    let pieChart = echarts.init(document.getElementById('pieChart'));
+
+    let data = [];
+
+    getData();
+    draw();
+
+    function getData() {
+        $.ajax({
+            url: '/data/list?page=1&limit=31',
+            type: 'get',
+            dataType: 'json',
+            success: function (res) {
+                // console.log(res.data)
+                data = res.data
+
+                draw()
+            }
+        })
+    }
+
+    function draw() {
+
+        let light = [];
+        let temp = [];
+        let hum = [];
+        let soil = [];
+        let sound = [];
+        let collTime = [];
+        let area = [];
+        area[0] = "湖南农业大学七教";
+        area[1] = "湖南农业大学十三教";
+        let j = 0;
+
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].areaId === 1) {
+                temp.push(data[i].temp)
+                hum.push(data[i].hum)
+                soil.push(data[i].soil)
+                collTime.push(data[i].collTime)
+            } else if (data[i].areaId === 2) {
+                light.push(data[i].light)
+                sound.push(data[i].sound)
+            } else if (data[i].areaId === 3) {
+                light.push(data[i].light)
+                sound.push(data[i].sound)
+                temp.push(data[i].temp)
+                hum.push(data[i].hum)
+                soil.push(data[i].soil)
+            }
+        }
+
+        let areaList = data.map(d => d.area)
+
+        // console.log(light)
+        let areaMap = new Map()
+
+        for (let i = 0; i < areaList.length; i++) {
+            if (!areaMap.has(areaList[i])) {
+                areaMap.set(areaList[i], 1)
+
+            } else {
+                areaMap.set(areaList[i], areaMap.get(areaList[i]) + 1)
+            }
+        }
+
+        let option1 = {
+            tooltip: {
+                trigger: 'axis',
+                boundaryGap: false,
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            title: {
+                text: '光照强度数据',
+                left: 'center'
+            },
+            xAxis: {
+                type: 'category',
+                data: collTime,
+                name: '采集时间',
+                inverse: true
+            },
+            yAxis: {
+                type: 'value',
+                name: '电压值(mV)'
+            },
+            series: [
+                {
+                    name: area[0],
+                    data: light,
+                    type: 'line',
+                    smooth: true,
+                    areaStyle: {}
+                }
+            ]
+        };
+        option1 && lightChart.setOption(option1);
+
+        let option2 = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            title: {
+                text: '温度数据展示',
+                left: 'center'
+            },
+            xAxis: {
+                type: 'category',
+                data: collTime,
+                name: '采集时间',
+                inverse: true
+            },
+            yAxis: {
+                type: 'value',
+                name: '温度(℃)'
+            },
+            series: [{
+                data: temp,
+                type: 'line',
+                smooth: true
+            }]
+        };
+        option2 && tempChart.setOption(option2);
+
+
+        let option3 = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            title: {
+                text: '湿度数据展示',
+                left: 'center'
+            },
+            xAxis: {
+                type: 'category',
+                data: collTime,
+                name: '采集时间',
+                inverse: true
+            },
+            yAxis: {
+                type: 'value',
+                name: '湿度(%)'
+            },
+            series: [{
+                data: hum,
+                type: 'line',
+                smooth: true
+            }]
+        };
+        option3 && humChart.setOption(option3);
+
+        let option4 = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            title: {
+                text: '土壤湿度',
+                left: 'center'
+            },
+            xAxis: {
+                type: 'category',
+                data: collTime,
+                name: '采集时间',
+                inverse: true
+            },
+            yAxis: {
+                type: 'value',
+                name: '湿度(%)'
+            },
+            series: [{
+                data: soil,
+                type: 'line',
+                smooth: true
+            }]
+        };
+        option4 && soilChart.setOption(option4);
+
+        let option5 = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            title: {
+                text: '声音数据',
+                left: 'center'
+            },
+            legend: {
+                // data:
+                right: 0,
+                orient: 'vertical'
+            },
+            xAxis: {
+                type: 'category',
+                data: collTime,
+                name: '采集时间',
+                inverse: true
+            },
+            yAxis: {
+                type: 'value',
+                name: '电压(mV)'
+            },
+            series: [{
+                data: sound,
+                type: 'line',
+                smooth: true
+            }]
+        };
+        option5 && soundChart.setOption(option5);
+
+        let option6 = {
+            title: {
+                text: '数据采集区域分析',
+                right: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'right',
+            },
+            series: [{
+                name: "数据采集区域统计",
+                type: 'pie',
+                radius: ['40%', '70%'],
+                itemStyle: {
+                    borderRadius: 10,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                },
+                data: [
+                    {value: areaMap.get(area[0]), name: area[0]},
+                    {value: areaMap.get(area[1]), name: area[1]},
+                ],
+            }]
+        };
+        option6 && pieChart.setOption(option6);
+    }
+
+    setInterval("getData()", 4000);
+</script>
+</body>
+</html>

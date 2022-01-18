@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.iot228.mapper.TbEquStateMapper">
+
+    <select id="selectTbEquStateById" parameterType="int" resultType="net.iot228.entity.TbEquState">
+        select id,
+               led1,
+               led2,
+               led3,
+               beep,
+               dht11,
+               light,
+               online
+        from tb_equipstate
+        where id = #{id}
+    </select>
+
+    <update id="updateEquipState" parameterType="net.iot228.entity.TbEquState">
+        update tb_equipstate
+        <set>
+            <if test="led1 != null">led1 = #{led1},</if>
+            <if test="led2 != null">led2 = #{led2},</if>
+            <if test="led3 != null">led3 = #{led3},</if>
+            <if test="beep != null">beep = #{beep},</if>
+            <if test="dht11 != null">dht11 = #{dht11},</if>
+            <if test="light != null">light = #{light},</if>
+            <if test="online != null">online = #{online}</if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>

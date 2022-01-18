@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.iot228.mapper.LoginMapper">
+
+<resultMap type="net.iot228.entity.User" id="UserResult">
+    <result property="id" column="id"/>
+    <result property="name" column="name"/>
+    <result property="password" column="password"/>
+    <result property="sex" column="sex"/>
+    <result property="age" column="age"/>
+    <result property="birthday" column="birthday"/>
+    <result property="phone" column="phone"/>
+    <result property="role" column="role"/>
+</resultMap>
+
+    <!-- 通过账号进行查询，登陆时用 -->
+    <select id="findByName" parameterType="String" resultType="net.iot228.entity.User">
+	SELECT 	id,
+		  name,
+		  password
+		FROM
+		user where name = #{value }
+</select>
+
+    <!-- 根据id查询用户数据 -->
+    <select id="findUserById" parameterType="Integer" resultType="net.iot228.entity.User">
+		SELECT
+		id,name,password,sex,age,birthday,phone,role
+		FROM
+		user
+		where id = #{id}
+	</select>
+
+</mapper>

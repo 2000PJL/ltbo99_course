@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>数据可视化</title>
+    <style>
+        body {
+            color: blue;
+            background:url("img/back2.jpg")  no-repeat center center;
+            background-repeat: no-repeat;
+            background-size: 120%;
+            background-attachment:fixed;
+        }
+    </style>
+    <script type="text/javascript" th:src="@{/js/echarts.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+</head>
+<body>
+<h2 style="text-align: center;color:red">彭俊龙228采集数据可视化</h2>
+<div style="text-align: center; margin:10px auto;">
+    <a href="/" rel="external nofollow">
+        <h2>点我返回动态列表展示</h2>
+    </a>
+</div>
+
+<div id="supersonic" style="display:inline-block;width: 45%;height:400px;margin-left: 50px"></div>
+<div id="hum" style="display:inline-block;width: 45%;height:400px;"></div>
+<div id="temp" style="display:inline-block;width: 45%;height:400px;margin-left: 50px"></div>
+<div id="address" style="display:inline-block;width: 45%;height:400px;"></div>
+<!--<div id="people" style="display:inline-block;width: 45%;height:400px;"></div>-->
+<script>
+    draw();
+    var tempChart = echarts.init(document.getElementById('temp'));
+    var humChart = echarts.init(document.getElementById('hum'));
+    var supersonicChart = echarts.init(document.getElementById('supersonic'));
+    var addressChart = echarts.init(document.getElementById('address'));
+    // var peopleChart = echarts.init(document.getElementById('people'));
+
+    function draw() {
+        var data;
+        $.ajax({
+            url: '/selectAllCollData',
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                var address = [];
+                var supersonic = [];
+                //var isPeople = 0;
+                var temp = [];
+                var hum = [];
+                var light = [];
+                var count1 = 0;
+                var count2 = 0;
+                /**采集时间*/
+                var collTime = [];
+                console.log(data)
+                // data = data.data
+
+                //最大显示30个数字
+                for (let i = 29; i >= 0; i--) {
+                    address.push(data[i].address);
+                    supersonic.push(data[i].supersonic)
+                    temp.push(data[i].temp)
+                    hum.push(data[i].hum)
+                    collTime.push(data[i].colltime)
+                    light.push(data[i].light)
+                }
+                option = {
+                    color: ['#3398DB'],
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    title: {
+                        text: '温度数据展示',
+                        left: 'center'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: collTime,
+                        name: '采集时间'
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'temp(℃)'
+                    },
+                    series: [{
+                        data: temp,
+                        type: 'line',
+                        smooth: true
+                    }]
+                };
+                tempChart.setOption(option);
+
+                option = {
+                    color: ['#EE6AA7'],
+                    tooltip: {
+                        trigger: 'axis',
+                        boundaryGap: false,
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    title: {
+                        text: '湿度数据展示',
+                        left: 'center'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: collTime,
+                        name: '采集时间'
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'hum(%)'
+                    },
+                    series: [{
+                        data: hum,
+                        type: 'line',
+                        smooth: true,
+                        areaStyle: {}
+                    }]
+                };
+
+                humChart.setOption(option);
+
+                option = {
+                    color: ['#ff5500'],
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                            type: 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                        }
+                    },
+                    title: {
+                        text: '超声波数据展示',
+                        left: 'center'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: collTime,
+                        name: '采集时间'
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'supersonic(cm)'
+                    },
+                    series: [{
+                        data: supersonic,
+                        type: 'bar',
+                        smooth: true
+                    }]
+                };
+                supersonicChart.setOption(option);
+
+                option = {
+                    color: ['#80FFA5'],
+                    title: {
+                        text: '光照强度数据展示',
+                        left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            label: {
+                                backgroundColor: '#6a7985'
+                            }
+                        }
+                    },
+                    grid: {
+                        left: '8%',
+                        right: '13%',
+                        bottom: '11%',
+                        containLabel: true
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            name:'采集时间',
+                            data:collTime
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name:'light(lx)',
+
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '光照强度',
+                            type: 'line',
+                            stack: 'Total',
+                            smooth: true,
+                            lineStyle: {
+                                width: 0
+                            },
+                            showSymbol: false,
+                            areaStyle: {
+                                opacity: 0.8,
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    {
+                                        offset: 0,
+                                        color: 'rgba(128, 255, 165)'
+                                    },
+                                    {
+                                        offset: 1,
+                                        color: 'rgba(1, 191, 236)'
+                                    }
+                                ])
+                            },
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: light
+                        },
+
+                    ]
+                };
+                addressChart.setOption(option);
+
+
+            }
+        })
+    }
+
+    setInterval("draw()", 1000);
+
+</script>
+</body>
+</html>

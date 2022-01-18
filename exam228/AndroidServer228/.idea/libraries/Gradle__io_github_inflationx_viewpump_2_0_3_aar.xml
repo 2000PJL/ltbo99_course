@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.inflationx:viewpump:2.0.3@aar">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/transforms-2/files-2.1/bf763171b68b86267a8df89a633cbaaf/viewpump-2.0.3/jars/classes.jar!/" />
+      <root url="file://$MAVEN_REPOSITORY$/caches/transforms-2/files-2.1/bf763171b68b86267a8df89a633cbaaf/viewpump-2.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/caches/modules-2/files-2.1/io.github.inflationx/viewpump/2.0.3/c604e675bc873c8a1189c0d1e18728906cba7596/viewpump-2.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
